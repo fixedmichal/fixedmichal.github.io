@@ -1,0 +1,268 @@
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+:root {
+    font-size: 20px;
+    --main-font-color : #4A4A4A;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #E5E5E5;
+    color: var(--main-font-color);
+}
+
+.site-container {
+    width: 95%;
+    margin: auto;
+}
+
+/*   GENERIC CLASSES */
+/*   GENERIC CLASSES */
+
+.sub-section {
+    margin: 10rem 0 0 0;
+}
+
+
+.section-header {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 3.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/*   
+
+
+
+    NAVBAR  !!
+
+
+
+              */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    
+}
+
+.navbar__navigation-links-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 50%;
+}
+
+.navbar__social-links-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    width: 50%;
+    list-style: none;
+}
+
+.navbar__navigation-links-list__item a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--main-font-color);
+}
+
+/*   
+
+
+
+    ABOUT-ME SECTION !!
+
+
+
+              */
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 85%;
+    margin-top: 10rem;
+    /* visibility: hidden;
+    opacity: 0;
+    transition: 2s; */
+    
+}
+
+.anima {
+    visibility: visible;
+    opacity:1;
+}
+
+/* .opacity1 {
+    opacity:1;
+} */
+
+/*     HEADER OF ABOUT-ME SECTION */
+/*     HEADER OF ABOUT-ME SECTION */
+
+.about-me__header-container {
+
+}
+.about-me__header{
+    font-size: 80px;
+    /* margin-left: 17.1rem; */
+    margin-bottom: -2.25rem;
+    line-height: 5rem;
+    text-align: right;
+}
+
+.header-part2 {
+    color: #1F7A8C;
+    /* color: #98CBB4; */
+    text-align: right;
+    position: relative;
+    top: 25px;
+}
+
+
+.about-me__content-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.photo-container {
+    width: 450px;
+}
+
+.photo-container > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 110%;
+    filter: blur(20px);
+}
+
+.about-me__description {
+    width: 70%;
+    align-self: center;
+    font-size: .9rem;
+    font-style: italic;
+}
+/*   
+
+
+
+    SKILLS SECTION !!
+
+
+
+              */
+.skills__header {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 3.6rem;
+    letter-spacing: 3px;
+}
+
+.skills__icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8rem;
+    width: 80%;
+    margin: auto;
+}
+/*   
+
+
+
+    HOBBY SECTION   !!
+
+
+
+              */
+
+.hobbies__hobbies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+}
+
+.hobby-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.hobby-container:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.hobby-image-container {
+    width: 600px;
+    /* border: 2px solid green; */
+    
+}
+
+.hobby-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.hobby-container__hobby-description {
+    width:50%;
+    height: 100%;
+    /* border: 2px solid blue; */
+}
+
+.hobby-header {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.contact-form-container {
+    border: 2px solid red;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    width: 25rem;
+    margin: auto;
+    /* border: 2px solid blue; */
+}
+
+.contact-form input {
+    height: 2rem;
+    
+    padding: 0 0 0 .5rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+
+}
+.contact-form input[type=textarea] {
+    height: 9rem;
+    position: relative;
+}
+
+.contact-form input[type=textarea]::placeholder {
+    position: absolute;
+    top: 10px;
+}
