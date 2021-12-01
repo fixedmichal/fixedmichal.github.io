@@ -16,11 +16,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #E5E5E5;
     color: var(--main-font-color);
+    width: 100%;
 }
 
 .site-container {
     width: 95%;
     margin: auto;
+    border: 2px solid red;
 }
 
 /*   GENERIC CLASSES */
@@ -33,6 +35,7 @@ body {
 
 .section-header {
     margin-bottom: 5rem;
+
     text-align: center;
     font-size: 3.6rem;
     letter-spacing: 3px;
@@ -55,8 +58,8 @@ body {
     width: 100%;
     margin: auto;
     margin-top: 1rem;
+
     text-transform: uppercase;
-    
 }
 
 .navbar__navigation-links-list {
@@ -115,11 +118,10 @@ body {
 /*     HEADER OF ABOUT-ME SECTION */
 /*     HEADER OF ABOUT-ME SECTION */
 
-.about-me__header-container {
 
-}
+
 .about-me__header{
-    font-size: 80px;
+    font-size: 4rem;
     /* margin-left: 17.1rem; */
     margin-bottom: -2.25rem;
     line-height: 5rem;
@@ -131,7 +133,7 @@ body {
     /* color: #98CBB4; */
     text-align: right;
     position: relative;
-    top: 25px;
+    top: 25px;    
 }
 
 
@@ -149,7 +151,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 110%;
-    filter: blur(20px);
+    /* filter: blur(20px); */
 }
 
 .about-me__description {
@@ -186,7 +188,7 @@ body {
 
 
 
-    HOBBY SECTION   !!
+    HOBBIES SECTION   !!
 
 
 
@@ -211,7 +213,7 @@ body {
 }
 
 .hobby-image-container {
-    width: 600px;
+    width: 30rem;
     
 }
 
@@ -299,4 +301,84 @@ body {
     background-color: var(--main-font-color);
     color: #E5E5E5;
 
+}
+
+/*   
+
+
+
+    MEDIA-QUERIES  !!
+
+
+
+              */
+
+
+@media (max-width: 1300px) {
+    :root {
+        font-size: 15px;
+    }
+
+     /* insert about-me section tweaks ! */
+ /* insert about-me section tweaks ! */
+ /* insert about-me section tweaks ! */
+ /* insert about-me section tweaks ! */
+ /* insert about-me section tweaks ! */
+
+    .hobby-container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 17.5px;
+    }
+
+    .navbar__navigation-links-list {
+        width: 70%;
+    }
+
+    .hobby-container {
+        flex-direction: column;
+    }
+
+    .hobby-container:nth-child(even) {
+        flex-direction: column;
+
+    }
+
+    .hobby-container__hobby-description {
+        width: 90%;
+    }
+
+    .hobby-header {
+        text-align: center;
+    }
+
+
+}
+
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 12px;
+    }
+    .hobby-image-container {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .contact-form {
+        width: 23rem;
+
+    }
 }
