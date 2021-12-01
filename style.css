@@ -204,7 +204,6 @@ body {
     align-items: center;
     gap: 7.5rem;
     margin: auto;
-    /* border: 2px solid red; */
 }
 
 .hobby-container:nth-child(even){
@@ -213,7 +212,6 @@ body {
 
 .hobby-image-container {
     width: 600px;
-    /* border: 2px solid green; */
     
 }
 
@@ -227,7 +225,6 @@ body {
 .hobby-container__hobby-description {
     width:50%;
     height: 100%;
-    /* border: 2px solid blue; */
 }
 
 .hobby-header {
@@ -235,9 +232,16 @@ body {
     margin-bottom: 2.4rem;
 }
 
-.contact-form-container {
-    border: 2px solid red;
-}
+/*   
+
+
+
+    CONTACT FORM SECTION   !!
+
+
+
+              */
+
 
 .contact-form {
     display: flex;
@@ -246,7 +250,6 @@ body {
     gap:1rem;
     width: 25rem;
     margin: auto;
-    /* border: 2px solid blue; */
 }
 
 .contact-form input {
@@ -265,4 +268,35 @@ body {
 .contact-form input[type=textarea]::placeholder {
     position: absolute;
     top: 10px;
+}
+
+.contact-form input[type=submit] {
+    height: 2.5rem;
+    background-color: var(--main-font-color);
+    color: #E5E5E5;
+    border-radius: 20px;
+}
+
+
+/*   
+
+
+
+    FOOTER  !!
+
+
+
+              */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+    padding: .5rem 0;
+    font-size: 0.7rem;
+    text-align: center;
+    background-color: var(--main-font-color);
+    color: #E5E5E5;
+
 }
