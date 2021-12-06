@@ -23,7 +23,6 @@ body {
 .site-container {
     width: 95%;
     margin: auto;
-    /* border: 2px solid red; */
 }
 
 /*   GENERIC CLASSES */
@@ -36,7 +35,6 @@ body {
 
 .section-header {
     margin-bottom: 5rem;
-
     text-align: center;
     font-size: 3.6rem;
     letter-spacing: 3px;
@@ -61,6 +59,8 @@ body {
     margin-top: 1rem;
 
     text-transform: uppercase;
+
+    
 }
 
 .navbar__navigation-links-list {
@@ -95,6 +95,7 @@ body {
 
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 /*   
 
@@ -108,36 +109,21 @@ body {
 
 .about-me {
     display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-top: 10rem;
-}
-
-
-/*     HEADER OF ABOUT-ME SECTION */
-/*     HEADER OF ABOUT-ME SECTION */
-
-.about-me__header{
-    font-size: 4rem;
-    margin-bottom: -2rem;
-    line-height: 5rem;
-    text-align: right;
-}
-
-.header-part2 {
-    color: #1F7A8C;
-    position: relative;
-    top: 25px;    
-}
-
-
-.about-me__content-container {
-    display: flex;
+    flex-direction: row;
     gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10rem;
+
 }
+
+
+/*     HEADER OF ABOUT-ME SECTION */
+/*     HEADER OF ABOUT-ME SECTION */
 
 .photo-container {
-    width: 450px;
+    flex-basis: 30%;
 }
 
 .photo-container > img {
@@ -148,10 +134,28 @@ body {
     filter: blur(17px);
 }
 
+.about-me__header{
+    font-size: 3.2em;
+    line-height: 4rem;
+}
+
+.header-part2 {
+    color: #1F7A8C;
+}
+
+.about-me__content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    flex-basis: 60%;
+}
+
+
 .about-me__description {
-    width: 70%;
-    align-self: center;
-    font-size: .9rem;
+    width: 85%;
+    
+    font-size: .9em;
     font-style: italic;
 }
 /*   
@@ -305,25 +309,15 @@ body {
 
               */
 
-@media (max-width: 1500px) {
-    .about-me__header{
-        margin-bottom: 0px;
-    }
-    .about-me__header-container{
-        margin-bottom: 1rem;
+@media (max-width: 1600px) {
+    .about-me {
+        font-size: 15px;
     }
 
-    .header-part-1 {
-        text-align: center;
+    .about-me__header-container > * {
+        line-height: 3rem;
     }
 
-    .header-part2 {
-        top: 0px;
-        position: static;
-        color: #1F7A8C;
-        text-align: right;
-        
-    }
 }
 
 @media (max-width: 1300px) {
@@ -332,37 +326,71 @@ body {
     }
     
     .about-me {
-        width: 100%;
+        flex-direction: column;
+        width: 80%;
+
     }
+
+    .photo-container {
+        width: 50%;
+    }
+    
+   .about-me__content-container {
+        gap: 3rem;
+        align-items: center;
+
+   }
+    .about-me__header-container > *{
+        line-height: 3.5rem;
+        font-size: 4rem;
+    }
+
+    .header-part1 {
+        text-align: center;
+
+    }
+    .header-part2 {
+        text-align: center;
+    }
+
+    .about-me__description {
+        /* width: 70%; */
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
     .hobby-container {
         gap: 2rem;
     }
 }
 
 @media (max-width: 900px) {
-    :root {
+    /* :root {
         font-size: 17.5px;
-    }
+    } */
 
     .navbar__navigation-links-list {
         width: 70%;
     }
 
     .about-me__header-container > *{
-        text-align: center;
+        line-height: 5rem;
     }
 
     .about-me__content-container {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
         
     }
 
+    .photo-container {
+        width: 22rem;
+    }
+
     .about-me__description {
-        margin-top: 2rem;
-        width: 90%;
+        width: 100%;
     }
 
     .hobby-container {
@@ -384,6 +412,8 @@ body {
     .hobby-image-container {
         width: 20rem;
     }
+
+  
 
 }
 
@@ -449,10 +479,15 @@ body {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
+    
 
     .contact-form {
-        width: 23rem;
+        width: 18rem;
 
+    }
+
+    .photo-container {
+        width: 20rem;
     }
 }
