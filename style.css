@@ -41,6 +41,9 @@ body {
     text-transform: uppercase;
 }
 
+
+
+
 /*   
 
 
@@ -50,53 +53,96 @@ body {
 
 
               */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: auto;
-    margin-top: 1rem;
+    padding: 1rem 3%;
 
     text-transform: uppercase;
 
-    
+    transition: all .5s ease-in-out;
 }
 
 .navbar__navigation-links-list {
     display: flex;
     justify-content: space-between;
-    list-style: none;
+
     width: 50%;
+
+    list-style: none;
 }
 
 .navbar__social-links-list {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
+
     width: 50%;
+
     list-style: none;
 }
 
 .navbar__navigation-links-list__item a{
     width: 100%;
-    text-decoration: none;
+
     font-size: 1.1rem;
     font-weight: 500;
+
     color: var(--main-font-color);
+
+    text-decoration: none;
     transition: 1s;
 }
 
 .navbar__navigation-links-list__item a:hover {
     color: var(--main-background-color);
     background: var(--main-font-color);
-
 }
 
 .hamburger {
     display: none;
     cursor: pointer;
+    transition: opacity .5s ease-out;
+
 }
+
+.close-navbar-button {
+    position: relative;
+    display: none;
+
+    background: var(--main-font-color);
+    cursor: pointer;
+    pointer-events: none;
+}
+
+
+
+.close-navbar-button::before, .close-navbar-button::after {
+    content: '';
+
+    background: var(--main-background-color);
+    position: absolute;
+    left: 15px;
+    bottom: -26px;
+    width: 4px;
+    height: 50px;
+    pointer-events: all;
+    cursor: pointer;
+
+}
+
+.close-navbar-button::before {
+    transform: rotate(45deg);
+}
+
+.close-navbar-button::after {
+    transform: rotate(-45deg);
+}
+
 /*   
 
 
@@ -354,7 +400,6 @@ body {
     }
 
     .about-me__description {
-        /* width: 70%; */
         font-size: 1rem;
         line-height: 1.8rem;
     }
@@ -365,9 +410,6 @@ body {
 }
 
 @media (max-width: 900px) {
-    /* :root {
-        font-size: 17.5px;
-    } */
 
     .navbar__navigation-links-list {
         width: 70%;
@@ -378,7 +420,6 @@ body {
     }
 
     .about-me__content-container {
-        /* margin-top: 2rem; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -432,6 +473,32 @@ body {
     .hamburger {
         display: block;
         font-size: 3rem;
+        opacity: 1;
+    }
+
+    .hamburger--disappearing {
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    
+    .display--none {
+        display: none;
+    }
+
+    .display {
+        display: block;
+    }
+
+    .display-zero-opacity {
+        display: block;
+        opacity: 0;
+        transition: opacity .5s ease-out;
+
+    }
+
+    .full-opacity {
+        opacity: 1;
     }
 
     .navbar__navigation-links-list {
@@ -444,12 +511,14 @@ body {
         height: calc(100vh - 77px);
         width: 100%;
         background: var(--main-background-color);
-        transform: translateX(-103%);
+        /* transform: translateX(-103%); */
+        transform: translate(-103%, 2%);
+        /* transform: translateY(2%); */
         transition: transform 0.5s ease-in;
     }
 
     .nav-sliding {
-        transform: translateX(-3%);
+        transform: translate(-3%, 2%);
     }
 
     .navbar__navigation-links-list__item {
@@ -490,4 +559,22 @@ body {
     .photo-container {
         width: 20rem;
     }
+}
+
+/* 
+
+
+    MODIFIER CLASSES!!
+
+
+
+*/
+
+.first-item {
+    order: -1;
+}
+
+.invert-color {
+    background: var(--main-font-color);
+    color: var(--main-background-color);
 }
